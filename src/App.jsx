@@ -10,7 +10,7 @@ import img6 from './images/image6.png'
 import img7 from './images/image7.png'
 import bodyimg from './images/body_image.png'
 import bodyimg2 from './images/body_image2.png'
-import {motion} from 'motion/react'
+import {easeIn, easeInOut, motion} from 'motion/react'
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         </div>
         <div className='w-[10%] flex justify-end '>__</div>
       </nav>
-      <section className='hero w-full h-screen flex flex-col justify-center items-center'>
+      <section className='hero  w-full h-screen flex flex-col justify-center items-center'>
         <div className='w-[100%] h-full flex flex-col justify-center items-center'>
           <h1 className="font-gerbil w-[70%] font-normal text-[80px] leading-[126px] tracking-normal text-center [leading-trim:none]">The thinkers and doers were changing the status quo with</h1>
           <h3 className='font-satoshi w-[40%] text-center'>We are a team of strategists, designers communicators, researchers.Together, we belive that progress only hghappens when you refuse to play thing safe.</h3>
@@ -48,10 +48,52 @@ function App() {
 
         </div>
         {/* ADD EFFECTS SVG HERE */}
-        <div></div>
+        <motion.div
+          initial={{opacity: 0, x: 100,rotateZ:260}}
+          animate={{opacity: 1, x: 0,rotateZ:0}}
+          transition={{ease:easeInOut,duration:1}}
+          className='absolute top-[200px] right-[100px] '
+        >
+          <svg width="117" height="146" viewBox="0 0 117 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M77.8783 -4.93067e-06C86.7352 5.11355 94.4983 11.9216 100.724 20.0353C106.95 28.149 111.517 37.4095 114.164 47.2882C116.811 57.1668 117.486 67.4701 116.151 77.6097C114.816 87.7494 111.497 97.5268 106.384 106.384C101.27 115.241 94.4622 123.004 86.3484 129.23C78.2347 135.455 68.9742 140.022 59.0955 142.669C49.2169 145.316 38.9136 145.992 28.774 144.657C18.6344 143.322 8.85694 140.003 -7.20974e-06 134.889L38.9391 67.4446L77.8783 -4.93067e-06Z" fill="#934CEC"/>
+          </svg>
+        </motion.div>
+        <div className='absolute top-[170px] right-[400px] -z-1'>
+          <svg width="595" height="56" viewBox="0 0 595 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <motion.path 
+            initial={{pathLength:0}}
+            animate={{pathLength:1}}
+            transition={{ease: easeIn,duration:1}} 
+            d="M72.1335 3H538.634L0.133545 27H594.134L293.134 53" stroke="#FFC250" stroke-width="6"/>
+          </svg>
+        </div>
+        <motion.div 
+          initial={{opacity: 0, x: -100}}
+          animate={{opacity: 1, x: 0}}
+          transition={{ease:easeInOut, delay:1,duration:1}}
+          className='absolute top-[222px] right-[180px] -z-1 opactity-0'
+        >
+          <svg width="320" height="100" viewBox="0 0 405 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="130" rx="68.5" fill="#FFC2EA"/>
+          </svg>
+        </motion.div>
+        <motion.div
+          initial={{opacity: 0, y: -100}}
+          animate={{opacity: 1, y: 0}}
+          transition={{ease:easeInOut, delay:1,duration:1}}
+          className='absolute top-[340px] left-[485px] -z-1 opactity-0'
+        >
+          <svg width="350" height="109" viewBox="0 0 456 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="109" rx="54.5" fill="#D7EEDD"/>
+          </svg>
+
+        </motion.div>
       </section>
+
+      
+
       {/* BODY */}
-      <section id='BODY'>
+      <section id='BODY' className='relative'>
       <section className='hero w-full h-screen flex justify-center items-center'>
         <div className='w-[60%] h-full flex flex-col justify-center items-start pl-[100px]'>
           <p className="font-gerbil w-[80%] font-normal text-[50px] leading-[80px] tracking-normal  [leading-trim:none]">Tomorrow should be better than today</p>
@@ -67,7 +109,39 @@ function App() {
           <img src={bodyimg}></img>
         </div>
       </section>
-      <div></div>
+      {/* SVG */}
+      <div>
+        <motion.div
+          className='absolute top-[-100px] left-[370px]'
+        >
+          <svg width="766" height="766" viewBox="0 0 766 766" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_f_2_16)">
+            <circle cx="383" cy="383" r="83" fill="#FF2020"/>
+            </g>
+            <defs>
+            <filter id="filter0_f_2_16" x="0" y="0" width="766" height="766" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_2_16"/>
+            </filter>
+            </defs>
+          </svg>
+        </motion.div>
+
+
+        <motion.div className='absolute top-[325px] left-[100px]'>
+          <svg width="372" height="33" viewBox="0 0 372 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <motion.path
+            initial={{pathLength:0}}
+            whileInView={{pathLength:1}}
+            transition={{ease: easeIn,duration:1}} 
+            d="M45.0339 1.5H336.4L0.0641632 15.9H371.064L183.066 31.5" stroke="#FFC250" stroke-width="3"/>
+          </svg>
+
+        </motion.div>
+
+
+      </div>
       <section className='hero w-full h-screen flex justify-center items-center'>
         <div className='w-[40%] h-full flex justify-center items-center'>
           <img src={bodyimg2}></img>
