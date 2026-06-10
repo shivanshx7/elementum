@@ -17,12 +17,14 @@ import { useState,useRef } from 'react'
 function App() {
   const [count, setCount] = useState(0)
   const containerRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
   });
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  return (
+
+    return (
     <>
       <nav className='flex justify-between items-center h-20 w-full px-10'>
         <div className='font-gerbil text-[28px] w-[10%]' >
@@ -120,7 +122,7 @@ function App() {
           </div>
         </div>
         <div className='w-[40%] h-full flex justify-center items-center relative right-[50px]'>
-          <img src={bodyimg}></img>
+          <img src={bodyimg} className='h-[500px] w-[500px]'></img>
         </div>
       </section>
       {/* SVG */}
@@ -149,7 +151,7 @@ function App() {
             <motion.path
             initial={{pathLength:0}}
             whileInView={{pathLength:1}}
-            transition={{ease: easeIn,duration:1}} 
+            transition={{ease: easeIn,duration:1,delay:0.5}} 
             viewport={{ once: true, amount: 0.5 }}
             d="M45.0339 1.5H336.4L0.0641632 15.9H371.064L183.066 31.5" stroke="#FFC250" stroke-width="3"/>
           </svg>
@@ -179,13 +181,104 @@ function App() {
             </filter>
             </defs>
           </svg>
+        
+
+          {/* square thingee */}
+          <div className='absolute top-[-550px] right-[30px]'>
+          <svg width="233" height="227" viewBox="0 0 233 227" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path  d="M45.3254 -2.02656e-06L232.277 40.5018L186.952 226.343L4.78625e-05 185.841L45.3254 -2.02656e-06Z" fill="#FF7171"/>
+          </svg>
+          </div>
+
+          {/* triangle thingee */}
+          <div className='absolute top-[200px] left-[30px]'>
+            <svg width="238" height="201" viewBox="0 0 238 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M118.645 0L237.291 200.25H0L118.645 0Z" fill="#FF7171"/>
+            </svg>
+          </div>
+          <div className='absolute top-[600px] left-[400px] z-200'>
+            <svg width="238" height="201" viewBox="0 0 238 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M118.645 0L237.291 200.25H0L118.645 0Z" fill="#FF7171"/>
+            </svg>
+          </div>
+
+
+          {/* progrezz zipzap */}
+          <motion.div className='absolute top-[570px] right-[370px]'>
+          <svg width="372" height="33" viewBox="0 0 372 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <motion.path
+            initial={{pathLength:0}}
+            whileInView={{pathLength:1}}
+            transition={{ease: easeIn,duration:1,delay:0.5}} 
+            viewport={{ once: true, amount: 0.5 }}
+            d="M45.0339 1.5H336.4L0.0641632 15.9H371.064L183.066 31.5" stroke="#FFC250" stroke-width="3"/>
+          </svg>
+
+          </motion.div>
+
+            {/* offer zipzap */}
+            <motion.div className='absolute top-[1318px] left-[80px] -z-1'>
+              <svg width="272" height="33" viewBox="0 0 372 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.path
+                  initial={{pathLength:0}}
+                  whileInView={{pathLength:1}}
+                  transition={{ease: easeIn,duration:1,delay:0.5}} 
+                  viewport={{ once: true, amount: 0.5 }}
+                d="M45.0339 1.5H336.4L0.0641632 15.9H371.064L183.066 31.5" stroke="#FFC250" stroke-width="3"/>
+              </svg>
+            </motion.div>
+
+            {/* green 2*/}
+          <motion.div
+            initial={{opacity: 1, x: -150}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{ease:easeInOut, delay:1,duration:1}}
+            viewport={{ once: true }}
+
+            className='absolute top-[1165px] left-[480px] -z-1 '
+          >
+            <svg width="300" height="109" viewBox="0 0 456 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="250" height="109" rx="54.5" fill="#D7EEDD"/>
+            </svg>
+
+          </motion.div>
+
+
+        </div>
+        {/* ribbon 2 */}
+        <div 
+          className='absolute top-[1400px] right-[-200px] -z-2'
+        >
+          <svg width="764" height="654" viewBox="0 0 864 654" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_1_158)">
+          <motion.path 
+            initial={{pathLength:0}}
+            whileInView={{pathLength:1}}
+            transition={{ease:easeInOut,duration:2,delay:0.5}}
+            viewport={{ once: true }}
+          
+          d="M1488.65 134.467C1446.64 22.3687 1055.93 -89.3365 963 120.86C835.832 408.503 777.269 398.935 693.689 397.279C610.11 395.623 306.809 225.312 181.153 337.967C41.357 463.299 144.653 654.467 12.6534 618.727" stroke="#FF6D6D" stroke-width="5"/>
+          </g>
+          <defs>
+          <filter id="filter0_d_1_158" x="0" y="0" width="1502.99" height="653.604" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="16"/>
+          <feGaussianBlur stdDeviation="6"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_158"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_158" result="shape"/>
+          </filter>
+          </defs>
+          </svg>
 
         </div>
 
       </div>
       <section className='hero w-full h-screen flex justify-center items-center'>
         <div className='w-[40%] h-full flex justify-center items-center relative left-[50px] bottom-[50px]'>
-          <img src={bodyimg2}></img>
+          <img src={bodyimg2} className='h-[500px] w-[500px]'></img>
         </div>
         <div className='w-[60%] h-full flex flex-col justify-center items-start pl-[100px]'>
           <p className="font-gerbil w-[80%] font-normal text-[50px] leading-[80px] tracking-normal  [leading-trim:none]">See how we can help you progress</p>
@@ -198,6 +291,7 @@ function App() {
           </div>
         </div>
       </section>
+      
       {/* Services */}
       <section className='hero w-full h-screen flex justify-center items-center'>
         <div className='w-[80%] m-auto flex flex-col justify-center items-start'>
