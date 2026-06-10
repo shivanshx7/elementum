@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './App.css'
 import img0 from './images/image0.png'
 import img1 from './images/image1.png'
@@ -11,11 +11,17 @@ import img7 from './images/image7.png'
 import bodyimg from './images/body_image.png'
 import bodyimg2 from './images/body_image2.png'
 import {easeIn, easeInOut, motion} from 'motion/react'
-
+import { useScroll, useTransform } from "framer-motion"; 
+import { useState,useRef } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
   return (
     <>
       <nav className='flex justify-between items-center h-20 w-full px-10'>
@@ -48,6 +54,8 @@ function App() {
 
         </div>
         {/* ADD EFFECTS SVG HERE */}
+
+        {/* Purple melon */}
         <motion.div
           initial={{opacity: 0, x: 100,rotateZ:260}}
           animate={{opacity: 1, x: 0,rotateZ:0}}
@@ -58,6 +66,8 @@ function App() {
             <path d="M77.8783 -4.93067e-06C86.7352 5.11355 94.4983 11.9216 100.724 20.0353C106.95 28.149 111.517 37.4095 114.164 47.2882C116.811 57.1668 117.486 67.4701 116.151 77.6097C114.816 87.7494 111.497 97.5268 106.384 106.384C101.27 115.241 94.4622 123.004 86.3484 129.23C78.2347 135.455 68.9742 140.022 59.0955 142.669C49.2169 145.316 38.9136 145.992 28.774 144.657C18.6344 143.322 8.85694 140.003 -7.20974e-06 134.889L38.9391 67.4446L77.8783 -4.93067e-06Z" fill="#934CEC"/>
           </svg>
         </motion.div>
+
+        {/* zipzap 1 */}
         <div className='absolute top-[170px] right-[400px] -z-1'>
           <svg width="595" height="56" viewBox="0 0 595 56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.path 
@@ -67,6 +77,8 @@ function App() {
             d="M72.1335 3H538.634L0.133545 27H594.134L293.134 53" stroke="#FFC250" stroke-width="6"/>
           </svg>
         </div>
+
+        {/* pink */}  
         <motion.div 
           initial={{opacity: 0, x: -100}}
           animate={{opacity: 1, x: 0}}
@@ -77,6 +89,8 @@ function App() {
             <rect width="320" height="130" rx="68.5" fill="#FFC2EA"/>
           </svg>
         </motion.div>
+
+        {/* green */}
         <motion.div
           initial={{opacity: 0, y: -100}}
           animate={{opacity: 1, y: 0}}
@@ -105,12 +119,13 @@ function App() {
             </svg>
           </div>
         </div>
-        <div className='w-[40%] h-full flex justify-center items-center'>
+        <div className='w-[40%] h-full flex justify-center items-center relative right-[50px]'>
           <img src={bodyimg}></img>
         </div>
       </section>
       {/* SVG */}
       <div>
+        {/* Red circle */}
         <motion.div
           className='absolute top-[-100px] left-[370px]'
         >
@@ -128,22 +143,48 @@ function App() {
           </svg>
         </motion.div>
 
-
+        {/* zigzag 2  */}
         <motion.div className='absolute top-[325px] left-[100px]'>
           <svg width="372" height="33" viewBox="0 0 372 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.path
             initial={{pathLength:0}}
             whileInView={{pathLength:1}}
             transition={{ease: easeIn,duration:1}} 
+            viewport={{ once: true, amount: 0.5 }}
             d="M45.0339 1.5H336.4L0.0641632 15.9H371.064L183.066 31.5" stroke="#FFC250" stroke-width="3"/>
           </svg>
 
         </motion.div>
 
+        {/* ribbon */}
+        <div ref={containerRef} 
+          className='absolute top-[700px] left-[30px] -z-2'
+        >
+          <svg   width="1483" height="654" viewBox="0 0 1483 654" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_2_9)">
+            <motion.path
+              style={{ pathLength }}
+            d="M1488.65 134.467C1446.64 22.3687 1055.93 -89.3365 963 120.86C835.832 408.503 777.269 398.935 693.689 397.279C610.11 395.623 306.809 225.312 181.153 337.967C41.357 463.299 144.653 654.467 12.6534 618.727" stroke="#FF6D6D" stroke-width="5"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_2_9" x="0" y="0" width="1502.99" height="653.604" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="16"/>
+            <feGaussianBlur stdDeviation="6"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_9"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_9" result="shape"/>
+            </filter>
+            </defs>
+          </svg>
+
+        </div>
 
       </div>
       <section className='hero w-full h-screen flex justify-center items-center'>
-        <div className='w-[40%] h-full flex justify-center items-center'>
+        <div className='w-[40%] h-full flex justify-center items-center relative left-[50px] bottom-[50px]'>
           <img src={bodyimg2}></img>
         </div>
         <div className='w-[60%] h-full flex flex-col justify-center items-start pl-[100px]'>
