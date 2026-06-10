@@ -10,7 +10,7 @@ import img6 from './images/image6.png'
 import img7 from './images/image7.png'
 import bodyimg from './images/body_image.png'
 import bodyimg2 from './images/body_image2.png'
-
+import {motion} from 'motion/react'
 
 
 function App() {
@@ -117,11 +117,81 @@ function App() {
         </div>
       </section>
       </section>
+      {/* Testmonial */}
       <section className='hero w-full h-screen flex justify-center items-center'>
-        <div className='m-auto'>
-          <div className=''></div>
-          <div></div>
-          <div></div>
+        <div className='m-auto flex justify-between items-center w-full h-full'>
+          <div className='h-full w-[30%] flex flex-col justify-center items-center '>
+            <img src={img0} alt='00' className='h-[150px] w-[150px]'></img>
+            <img src={img2} alt='02' className='h-[150px] w-[150px]'></img>
+            <img src={img4} alt='04' className='h-[150px] w-[150px]'></img>
+
+
+          </div>
+          <div className='h-full w-[50%] flex flex-col justify-center items-center'>
+            <h1 className='font-gerbil text-[30px] w-[70%] text-center mb-[20px]'>What our customer says about us</h1>
+            <div className='bg-green-100 h-[30%] w-[100%] rounded-xl'></div>
+            <div className='h-[5%] w-[100%]'></div>
+          </div>
+          <div className='h-full w-[30%] flex flex-col justify-center items-center '>
+            <img src={img1} alt='01' className='h-[150px] w-[150px]'></img>
+            <img src={img3} alt='03' className='h-[150px] w-[150px]'></img>
+            <img src={img5} alt='05' className='h-[150px] w-[150px]'></img>
+
+
+          </div>
+        </div>
+      </section>
+      <section className='h-screen bg-green-100 flex justify-center items-center w-[100%]'>
+        <div className='m-auto w-[80%] h-[80%] flex flex-col justify-around items-center gap-[50px]'>
+          <div className='flex flex-col w-full justify-center items-center h-[60%] '>
+            <p className="font-gerbil text-[80px] text-center w-[60%] ">Subscribe to our Newsletter</p>
+            <div className='h-[20%] flex flex-col justify-between items-center'>
+              <p className='font-satoshi'>To make your stay special and even more memorable</p>
+              <div className='flex justify-center items-center'><button className=''>Subscribe</button></div>
+            </div>
+          </div>
+          <div className='flex w-full border-t border-black-200 '>
+            <div className='w-[386px] h-[300px]  flex flex-col justify-center items-start'>
+              <div className='font-gerbil text-[20px] text-start'>Company</div>
+              <div className='font-satoshi text-[16px] text-start flex flex-col justify-around items-start h-[60%]'>
+                <div>Home</div>
+                <div>Services</div>
+                <div>Testimonials</div>
+                <div>Contact</div>
+              </div>
+            </div>
+
+            <div className='w-[386px] h-[300px]  flex flex-col justify-center items-start'>
+              <div className='font-gerbil text-[20px] text-start'>Company</div>
+              <div className='font-satoshi text-[16px] text-start flex flex-col justify-around items-start h-[60%]'>
+                <div>Home</div>
+                <div>Services</div>
+                <div>Testimonials</div>
+                <div>Contact</div>
+              </div>
+            </div>
+
+            <div className='w-[386px] h-[300px]  flex flex-col justify-center items-start'>
+              <div className='font-gerbil text-[20px] text-start'>Company</div>
+              <div className='font-satoshi text-[16px] text-start flex flex-col justify-around items-start h-[60%]'>
+                <div>Home</div>
+                <div>Services</div>
+                <div>Testimonials</div>
+                <div>Contact</div>
+              </div>
+            </div>
+
+            <div className='w-[386px] h-[300px]  flex flex-col justify-center items-start'>
+              <div className='font-gerbil text-[20px] text-start'>Company</div>
+              <div className='font-satoshi text-[16px] text-start flex flex-col justify-around items-start h-[60%]'>
+                <div>Home</div>
+                <div>Services</div>
+                <div>Testimonials</div>
+                <div>Contact</div>
+              </div>
+            </div>
+            
+          </div>
         </div>
       </section>
     </>
