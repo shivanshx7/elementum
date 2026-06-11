@@ -296,16 +296,24 @@ function App() {
       <section className='hero w-full h-screen flex justify-center items-center'>
         <div className='w-[80%] m-auto flex flex-col justify-center items-start'>
           <h1 className="font-gerbil w-[52%] font-normal text-[70px] leading-[80px] tracking-normal mb-[80px] [leading-trim:none]">What we can offer you</h1>
-          <div className='w-[100%] m-auto flex justify-between items-center h-[20%] border-y border-black-200 py-[24px]'>
-            <p className='font-satoshi text-[18px] w-[17%]'>Office of multiple interest content</p>
-            <p className='font-gerbil text-[30px] w-[50%]'>Colaborative & partnership</p>
+          <motion.div
+           initial={{color:'black'}}
+           whileHover={{color:'#3ACABB'}}
+           className='w-[100%] m-auto flex justify-between items-center h-[20%] border-y border-black-200 py-[24px]'>
+            <motion.p 
+            className='font-satoshi text-[18px] w-[17%]'>Office of multiple interest content</motion.p>
+            <motion.p
+            className='font-gerbil text-[30px] w-[50%]'>Colaborative & partnership</motion.p>
             
             <svg width="82" height="15" viewBox="0 0 82 15" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginTop: "15px"}}>
               <path d="M81.7071 8.07089C82.0976 7.68036 82.0976 7.0472 81.7071 6.65667L75.3431 0.29271C74.9526 -0.0978144 74.3195 -0.0978145 73.9289 0.29271C73.5384 0.683234 73.5384 1.3164 73.9289 1.70692L79.5858 7.36378L73.9289 13.0206C73.5384 13.4112 73.5384 14.0443 73.9289 14.4348C74.3195 14.8254 74.9526 14.8254 75.3431 14.4348L81.7071 8.07089ZM0 7.36377L-6.9424e-08 8.36377L81 8.36378L81 7.36378L81 6.36378L6.9424e-08 6.36377L0 7.36377Z" fill="black"/>
             </svg>
 
-          </div>
-          <div className='w-[100%] m-auto flex justify-between items-center h-[20%] border-b border-black-200 py-[24px]'>
+          </motion.div>
+          <motion.div
+            initial={{color:'black'}}
+            whileHover={{color:'#3ACABB'}}
+          className='w-[100%] m-auto flex justify-between items-center h-[20%] border-b border-black-200 py-[24px]'>
             <p className='font-satoshi text-[18px] w-[20%]'>The hanger US Air force digital experimental</p>
             <p className='font-gerbil text-[30px] w-[50%]'>We talk about our weight</p>
             
@@ -313,8 +321,11 @@ function App() {
               <path d="M81.7071 8.07089C82.0976 7.68036 82.0976 7.0472 81.7071 6.65667L75.3431 0.29271C74.9526 -0.0978144 74.3195 -0.0978145 73.9289 0.29271C73.5384 0.683234 73.5384 1.3164 73.9289 1.70692L79.5858 7.36378L73.9289 13.0206C73.5384 13.4112 73.5384 14.0443 73.9289 14.4348C74.3195 14.8254 74.9526 14.8254 75.3431 14.4348L81.7071 8.07089ZM0 7.36377L-6.9424e-08 8.36377L81 8.36378L81 7.36378L81 6.36378L6.9424e-08 6.36377L0 7.36377Z" fill="black"/>
             </svg>
 
-          </div>
-          <div className='w-[100%] m-auto flex justify-between items-center h-[20%] border-b border-black-200 py-[24px]'>
+          </motion.div>
+          <motion.div
+            initial={{color:'black'}}
+            whileHover={{color:'#3ACABB'}}
+          className='w-[100%] m-auto flex justify-between items-center h-[20%] border-b border-black-200 py-[24px]'>
             <p className='font-satoshi text-[18px] w-[20%]'>Delta faucet content, social, digital</p>
             <p className='font-gerbil text-[30px] w-[50%]'>Piloting digital confidence</p>
             
@@ -322,7 +333,7 @@ function App() {
               <path d="M81.7071 8.07089C82.0976 7.68036 82.0976 7.0472 81.7071 6.65667L75.3431 0.29271C74.9526 -0.0978144 74.3195 -0.0978145 73.9289 0.29271C73.5384 0.683234 73.5384 1.3164 73.9289 1.70692L79.5858 7.36378L73.9289 13.0206C73.5384 13.4112 73.5384 14.0443 73.9289 14.4348C74.3195 14.8254 74.9526 14.8254 75.3431 14.4348L81.7071 8.07089ZM0 7.36377L-6.9424e-08 8.36377L81 8.36378L81 7.36378L81 6.36378L6.9424e-08 6.36377L0 7.36377Z" fill="black"/>
             </svg>
 
-          </div>
+          </motion.div>
         </div>
       </section>
       </section>
@@ -337,7 +348,7 @@ function App() {
 
           </div>
           <div className='h-full w-[50%] flex flex-col justify-center items-center'>
-            <h1 className='font-gerbil text-[30px] w-[70%] text-center mb-[20px]'>What our customer says about us</h1>
+            <h1 className='font-gerbil text-[50px] w-[90%] text-center mb-[20px]'>What our customer says about us</h1>
             <div className='bg-green-100 h-[30%] w-[100%] rounded-xl'></div>
             <div className='h-[5%] w-[100%]'></div>
           </div>
