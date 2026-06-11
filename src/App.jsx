@@ -341,21 +341,31 @@ function App() {
       <section className='hero w-full h-screen flex justify-center items-center'>
         <div className='m-auto flex justify-between items-center w-full h-full'>
           <div className='h-full w-[30%] flex flex-col justify-center items-center '>
-            <img src={img0} alt='00' className='h-[150px] w-[150px]'></img>
-            <img src={img2} alt='02' className='h-[150px] w-[150px]'></img>
-            <img src={img4} alt='04' className='h-[150px] w-[150px]'></img>
+            <img src={img0} alt='00' className='h-[100px] w-[100px] relative left-[-100px]' ></img>
+            <img src={img2} alt='02' className='h-[200px] w-[200px] relative left-[50px]'></img>
+            <img src={img4} alt='04' className='h-[85px] w-[85px] relative left-[-100px] top-[20px]'></img>
+            <img src={img5} alt='05' className='h-[150px] w-[150px] relative left-[50px] top-[50px]'></img>
+
 
 
           </div>
           <div className='h-full w-[50%] flex flex-col justify-center items-center'>
             <h1 className='font-gerbil text-[50px] w-[90%] text-center mb-[20px]'>What our customer says about us</h1>
-            <div className='bg-green-100 h-[30%] w-[100%] rounded-xl'></div>
+            <div className='bg-green-100 h-[30%] w-[100%] rounded-xl flex justify-center items-center p-[20px] text-[18px] font-satoshi px-[60px]'>Elementum  delivered the site with inthe timeline
+                as they requested. Inthe end, the client found a 50% 
+                increase in traffic with in days since its launch. They
+                also had an impressive ability to use technologies that
+                the company hasn`t used, which have also proved to
+                be easy to use and reliable 
+            </div>
             <div className='h-[5%] w-[100%]'></div>
           </div>
           <div className='h-full w-[30%] flex flex-col justify-center items-center '>
-            <img src={img1} alt='01' className='h-[150px] w-[150px]'></img>
-            <img src={img3} alt='03' className='h-[150px] w-[150px]'></img>
-            <img src={img5} alt='05' className='h-[150px] w-[150px]'></img>
+            <img src={img1} alt='01' className='h-[85px] w-[85px] relative left-[-120px] top-[180px]'></img>
+            <img src={img3} alt='03' className='h-[150px] w-[150px] relative left-[40px] top-[-100px]'></img>
+            <img src={img6} alt='05' className='h-[85px] w-[85px] relative left-[30px] top-[30px]'></img>
+            <img src={img7} alt='05' className='h-[220px] w-[220px] relative top-[80px]'></img>
+
 
 
           </div>
@@ -372,42 +382,42 @@ function App() {
           </div>
           <div className='flex w-full border-t border-black-200 '>
             <div className='w-[386px] h-[300px]  flex flex-col justify-center items-start'>
-              <div className='font-gerbil text-[20px] text-start'>Company</div>
+              <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}} className='font-gerbil text-[20px] text-start'>Company</motion.div>
               <div className='font-satoshi text-[16px] text-start flex flex-col justify-around items-start h-[60%]'>
-                <div>Home</div>
-                <div>Services</div>
-                <div>Testimonials</div>
-                <div>Contact</div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Home</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Services</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Testimonials</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Contact</motion.div>
               </div>
             </div>
 
             <div className='w-[386px] h-[300px]  flex flex-col justify-center items-start'>
-              <div className='font-gerbil text-[20px] text-start'>Company</div>
+              <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}} className='font-gerbil text-[20px] text-start'>Company</motion.div>
               <div className='font-satoshi text-[16px] text-start flex flex-col justify-around items-start h-[60%]'>
-                <div>Home</div>
-                <div>Services</div>
-                <div>Testimonials</div>
-                <div>Contact</div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Home</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Services</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Testimonials</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Contact</motion.div>
               </div>
             </div>
 
             <div className='w-[386px] h-[300px]  flex flex-col justify-center items-start'>
-              <div className='font-gerbil text-[20px] text-start'>Company</div>
+              <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}} className='font-gerbil text-[20px] text-start'>Company</motion.div>
               <div className='font-satoshi text-[16px] text-start flex flex-col justify-around items-start h-[60%]'>
-                <div>Home</div>
-                <div>Services</div>
-                <div>Testimonials</div>
-                <div>Contact</div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Home</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Services</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Testimonials</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Contact</motion.div>
               </div>
             </div>
 
             <div className='w-[386px] h-[300px]  flex flex-col justify-center items-start'>
-              <div className='font-gerbil text-[20px] text-start'>Company</div>
+              <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}} className='font-gerbil text-[20px] text-start'>Company</motion.div>
               <div className='font-satoshi text-[16px] text-start flex flex-col justify-around items-start h-[60%]'>
-                <div>Home</div>
-                <div>Services</div>
-                <div>Testimonials</div>
-                <div>Contact</div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Home</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Services</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Testimonials</motion.div>
+                <motion.div initial={{textDecoration: 'none'}} whileHover={{textDecoration:'underline'}}>Contact</motion.div>
               </div>
             </div>
             
